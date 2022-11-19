@@ -6,46 +6,42 @@ namespace Enyutin_Kononenko_GIT
     {
         static void Main()
         {
-            int[] arr = { 3, 9, 4, 6, 4, 1, 2, 3, 2, 8, 7, 7 };
-
-            Console.WriteLine("Unsorted");
-            foreach (int n in arr)
-                Console.Write(n + " ");
-            Console.WriteLine();
-
-            QSort(arr);
-
-            Console.WriteLine("Sorted");
-            foreach (int n in arr)
-                Console.Write(n + " ");
-            Console.WriteLine();
-        }
-
-        static void Swap(ref int a, ref int b)
-        {
-            int tmp = a;
-            a = b;
-            b = tmp;
-        }
-
-        static void QSort(int[] array, int firstIndex = 0, int lastIndex = -1)
-        {
-            if (lastIndex < 0)
-                lastIndex = array.Length - 1;
-            if (firstIndex >= lastIndex)
-                return;
-            int middleIndex = (lastIndex - firstIndex) / 2 + firstIndex, currentIndex = firstIndex;
-            Swap(ref array[firstIndex], ref array[middleIndex]);
-            for (int i = firstIndex + 1; i <= lastIndex; ++i)
+            Console.WriteLine("Введите через запятую целые числа и нажмите Enter");
+            string[] nums = Console.ReadLine().Split(new char[] { ',' });
+            int[] intArray = new int[nums.Length];
+            for (int i = 0; i < nums.Length; i++)
             {
-                if (array[i] <= array[firstIndex])
-                {
-                    Swap(ref array[++currentIndex], ref array[i]);
-                }
+                intArray[i] = int.Parse(nums[i]);
             }
-            Swap(ref array[firstIndex], ref array[currentIndex]);
-            QSort(array, firstIndex, currentIndex - 1);
-            QSort(array, currentIndex + 1, lastIndex);
+            InsertionSort(intArray);
+            Console.WriteLine("\r\nОтсортированный массив:");
+            foreach (int value in intArray)
+            {
+                Console.Write($"{value} ");
+            }
+        }
+
+        static void Swap(int[] array, int i, int j)
+        {
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        static void InsertionSort(int[] inArray)
+        {
+            int x;
+            int j;
+            for (int i = 1; i < inArray.Length; i++)
+            {
+                x = inArray[i];
+                j = i;
+                while (j > 0 && inArray[j - 1] > x)
+                {
+                    Swap(inArray, j, j - 1);
+                    j -= 1;
+                }
+                inArray[j] = x;
+            }
         }
     }
 }
