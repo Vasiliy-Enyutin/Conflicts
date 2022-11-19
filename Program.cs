@@ -1,48 +1,47 @@
-﻿using System;
+using System;
 
 namespace Enyutin_Kononenko_GIT
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Сортировка пузырьком");
-            Console.Write("Введите элементы массива: ");
-            var parts = Console.ReadLine().Split(new[] { " ", ",", ";" }, StringSplitOptions.RemoveEmptyEntries);
-            var array = new int[parts.Length];
-            for (int i = 0; i < parts.Length; i++)
+            Console.WriteLine("Введите через запятую целые числа и нажмите Enter");
+            string[] nums = Console.ReadLine().Split(new char[] { ',' });
+            int[] intArray = new int[nums.Length];
+            for (int i = 0; i < nums.Length; i++)
             {
-                array[i] = Convert.ToInt32(parts[i]);
+                intArray[i] = int.Parse(nums[i]);
             }
-
-            Console.WriteLine("Отсортированный массив: {0}", string.Join(", ", BubbleSort(array)));
-
-            Console.ReadLine();
-        }
-
-        static void Swap(ref int e1, ref int e2)
-        {
-            var temp = e1;
-            e1 = e2;
-            e2 = temp;
-        }
-
-        //сортировка пузырьком
-        static int[] BubbleSort(int[] array)
-        {
-            var len = array.Length;
-            for (var i = 1; i < len; i++)
+            InsertionSort(intArray);
+            Console.WriteLine("\r\nОтсортированный массив:");
+            foreach (int value in intArray)
             {
-                for (var j = 0; j < len - i; j++)
+                Console.Write($"{value} ");
+            }
+        }
+
+        static void Swap(int[] array, int i, int j)
+        {
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        static void InsertionSort(int[] inArray)
+        {
+            int x;
+            int j;
+            for (int i = 1; i < inArray.Length; i++)
+            {
+                x = inArray[i];
+                j = i;
+                while (j > 0 && inArray[j - 1] > x)
                 {
-                    if (array[j] > array[j + 1])
-                    {
-                        Swap(ref array[j], ref array[j + 1]);
-                    }
+                    Swap(inArray, j, j - 1);
+                    j -= 1;
                 }
+                inArray[j] = x;
             }
-
-            return array;
         }
     }
 }
