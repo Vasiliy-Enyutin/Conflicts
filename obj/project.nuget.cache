@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZVWlA56ZBLGRHLbx2jzXNwHbnO5jNEgiq4v5G8KWBT6bSvsEnW3qUPbC0lyOzBL0uUaxsE2tO5TMIT2uQZKaag==",
+  "success": true,
+  "projectFilePath": "C:\\Enyutin-Kononenko-GIT\\Enyutin-Kononenko-GIT\\Enyutin-Kononenko-GIT.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\GTvas\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+  ],
+  "logs": []
+}

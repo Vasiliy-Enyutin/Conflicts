@@ -1,0 +1,14 @@
+C:\Enyutin-Kononenko-GIT\Enyutin-Kononenko-GIT\bin\Debug\netcoreapp3.1\Enyutin-Kononenko-GIT.exe
+C:\Enyutin-Kononenko-GIT\Enyutin-Kononenko-GIT\bin\Debug\netcoreapp3.1\Enyutin-Kononenko-GIT.deps.json
+C:\Enyutin-Kononenko-GIT\Enyutin-Kononenko-GIT\bin\Debug\netcoreapp3.1\Enyutin-Kononenko-GIT.runtimeconfig.json
+C:\Enyutin-Kononenko-GIT\Enyutin-Kononenko-GIT\bin\Debug\netcoreapp3.1\Enyutin-Kononenko-GIT.runtimeconfig.dev.json
+C:\Enyutin-Kononenko-GIT\Enyutin-Kononenko-GIT\bin\Debug\netcoreapp3.1\Enyutin-Kononenko-GIT.dll
+C:\Enyutin-Kononenko-GIT\Enyutin-Kononenko-GIT\bin\Debug\netcoreapp3.1\Enyutin-Kononenko-GIT.pdb
+C:\Enyutin-Kononenko-GIT\Enyutin-Kononenko-GIT\obj\Debug\netcoreapp3.1\Enyutin-Kononenko-GIT.csproj.AssemblyReference.cache
+C:\Enyutin-Kononenko-GIT\Enyutin-Kononenko-GIT\obj\Debug\netcoreapp3.1\Enyutin-Kononenko-GIT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Enyutin-Kononenko-GIT\Enyutin-Kononenko-GIT\obj\Debug\netcoreapp3.1\Enyutin-Kononenko-GIT.AssemblyInfoInputs.cache
+C:\Enyutin-Kononenko-GIT\Enyutin-Kononenko-GIT\obj\Debug\netcoreapp3.1\Enyutin-Kononenko-GIT.AssemblyInfo.cs
+C:\Enyutin-Kononenko-GIT\Enyutin-Kononenko-GIT\obj\Debug\netcoreapp3.1\Enyutin-Kononenko-GIT.csproj.CoreCompileInputs.cache
+C:\Enyutin-Kononenko-GIT\Enyutin-Kononenko-GIT\obj\Debug\netcoreapp3.1\Enyutin-Kononenko-GIT.dll
+C:\Enyutin-Kononenko-GIT\Enyutin-Kononenko-GIT\obj\Debug\netcoreapp3.1\Enyutin-Kononenko-GIT.pdb
+C:\Enyutin-Kononenko-GIT\Enyutin-Kononenko-GIT\obj\Debug\netcoreapp3.1\Enyutin-Kononenko-GIT.genruntimeconfig.cache
