@@ -4,48 +4,45 @@ namespace Enyutin_Kononenko_GIT
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            int[] arr = { 3, 9, 4, 6, 4, 1, 2, 3, 2, 8, 7, 7 };
-
-            Console.WriteLine("Unsorted");
-            foreach (int n in arr)
-                Console.Write(n + " ");
-            Console.WriteLine();
-
-            QSort(arr);
-
-            Console.WriteLine("Sorted");
-            foreach (int n in arr)
-                Console.Write(n + " ");
-            Console.WriteLine();
-        }
-
-        static void Swap(ref int a, ref int b)
-        {
-            int tmp = a;
-            a = b;
-            b = tmp;
-        }
-
-        static void QSort(int[] array, int firstIndex = 0, int lastIndex = -1)
-        {
-            if (lastIndex < 0)
-                lastIndex = array.Length - 1;
-            if (firstIndex >= lastIndex)
-                return;
-            int middleIndex = (lastIndex - firstIndex) / 2 + firstIndex, currentIndex = firstIndex;
-            Swap(ref array[firstIndex], ref array[middleIndex]);
-            for (int i = firstIndex + 1; i <= lastIndex; ++i)
+            Console.WriteLine("Сортировка пузырьком");
+            Console.Write("Введите элементы массива: ");
+            var parts = Console.ReadLine().Split(new[] { " ", ",", ";" }, StringSplitOptions.RemoveEmptyEntries);
+            var array = new int[parts.Length];
+            for (int i = 0; i < parts.Length; i++)
             {
-                if (array[i] <= array[firstIndex])
+                array[i] = Convert.ToInt32(parts[i]);
+            }
+
+            Console.WriteLine("Отсортированный массив: {0}", string.Join(", ", BubbleSort(array)));
+
+            Console.ReadLine();
+        }
+
+        static void Swap(ref int e1, ref int e2)
+        {
+            var temp = e1;
+            e1 = e2;
+            e2 = temp;
+        }
+
+        //сортировка пузырьком
+        static int[] BubbleSort(int[] array)
+        {
+            var len = array.Length;
+            for (var i = 1; i < len; i++)
+            {
+                for (var j = 0; j < len - i; j++)
                 {
-                    Swap(ref array[++currentIndex], ref array[i]);
+                    if (array[j] > array[j + 1])
+                    {
+                        Swap(ref array[j], ref array[j + 1]);
+                    }
                 }
             }
-            Swap(ref array[firstIndex], ref array[currentIndex]);
-            QSort(array, firstIndex, currentIndex - 1);
-            QSort(array, currentIndex + 1, lastIndex);
+
+            return array;
         }
     }
 }
